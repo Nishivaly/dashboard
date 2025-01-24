@@ -1,0 +1,29 @@
+body {
+    font-size: 1.6rem;
+    height: 100vh;
+}
+
+.main-grid {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 300px 3fr;
+}
+
+.right-side {
+    grid-column: 2 / span 1;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+}
+
+.dashboard {
+    background-color: aqua;
+    grid-column: 1 / span 1;
+}
+
+.header {
+    background-color: red;
+}
+
+.main {
+    background-color: green;
+}
