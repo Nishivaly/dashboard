@@ -132,8 +132,8 @@ ul {
     grid-template-rows: auto 3fr auto 3fr;
     padding: 0 30px 50px 30px;
     column-gap: 30px;
-    > div {
-        border-radius: 10px;;
+    > div, .card {
+        border-radius: 10px;
     }
 }
 
@@ -145,9 +145,14 @@ ul {
 
 .timeline {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-row: span 3;
-    background-color: aquamarine;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-left: 10px rgba(211, 197, 9, 0.781) solid;
 }
 
 .announcements,
@@ -157,6 +162,7 @@ ul {
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 30px;
+    /* height: min-content; */
 }
 
 .announcements {
