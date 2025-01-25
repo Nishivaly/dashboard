@@ -132,12 +132,14 @@ ul {
     grid-template-rows: auto 3fr auto 3fr;
     padding: 0 30px 50px 30px;
     column-gap: 30px;
-    > div, .card {
+
+    >div,
+    .card {
         border-radius: 10px;
     }
 }
 
-.tw-content > h2 {
+.tw-content>h2 {
     align-self: end;
     margin-top: 30px;
     margin-bottom: 5px;
@@ -152,7 +154,21 @@ ul {
 
 .card {
     background-color: white;
+    display: grid;
+    gap: 20px;
+    padding: 30px;
+    grid-template-rows: 1fr min-content;
     border-left: 10px rgba(211, 197, 9, 0.781) solid;
+}
+
+.card>.icons {
+    display: flex;
+    align-self: end;
+    justify-self: end;
+    gap: 10px;
+    >img {
+        height: 25px;
+    }
 }
 
 .announcements,
@@ -161,8 +177,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 20px 30px;
-    /* height: min-content; */
+    padding: 20px 30px;    
 }
 
 .announcements {
