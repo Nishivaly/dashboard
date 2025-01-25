@@ -39,6 +39,31 @@ body {
 
 .header {
     background-color: red;
+    display: grid;
+}
+
+.search {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    > ul {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+    }
+}
+
+#lookup {
+    height: 30px;
+    border-radius: 20px;
+    max-width: 50%;
+    flex: 1;
+}
+
+.panel {
+    display: flex;
 }
 
 .main {
