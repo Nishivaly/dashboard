@@ -26,6 +26,7 @@ body {
     display: grid;
     align-content: start;
     gap: 40px;
+
     &>ul {
         list-style-type: none;
         padding: 0;
@@ -37,10 +38,9 @@ body {
 }
 
 .header {
-    background-color: red;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr;
     padding: 0 50px;
 }
 
@@ -48,7 +48,8 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    > input {
+
+    >input {
         height: 30px;
         border-radius: 20px;
         flex: 1;
@@ -56,7 +57,7 @@ body {
     }
 }
 
-.header > ul {
+.header>ul:first-of-type {
     display: flex;
     align-items: center;
     justify-content: end;
@@ -69,6 +70,35 @@ body {
     border-radius: 30px;
 }
 
+.header .hi-there {
+    display: grid;
+    grid-template-columns: auto 3fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 20px 0px;
+
+    >#big-pfp {
+        grid-row: 1 / span 2;
+        place-self: center;
+        aspect-ratio: 1;
+        height: 80px;
+        border-radius: 50px;
+        margin-right: 20px;
+    }
+}
+
+.hi-there > div {
+    grid-row: 1 /span 2;
+    display: grid;
+    > :first-child {
+        align-self: end;
+        font-weight: 700;
+    }
+    > :last-child {
+        font-weight: 900;
+        font-size: 2.0rem;
+    }
+}
+
 .main {
-    background-color: green;
+    background-color: rgb(199, 212, 218);
 }
